@@ -1,17 +1,22 @@
 {
-  "name": "",
-  "version": "",
+  "name": "front-end-capstone-server",
+  "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "author": "",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "json-server": "json-server --watch database/fakeDataGenerator.js"
   },
   "dependencies": {
+    "faker": "^4.1.0",
+    "json-server": "^0.15.0"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "morgan": "^1.9.1"
   }
 }
