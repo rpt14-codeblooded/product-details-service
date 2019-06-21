@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "author": "Derrick Morton",
-  "license": "ISC",
+  "license": "MIT liscence",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "test": "jest",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
     "json-server": "json-server --watch database/fakeDataGenerator.js"
@@ -33,6 +34,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^3.0.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest": "^24.8.0",
     "morgan": "^1.9.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.0",

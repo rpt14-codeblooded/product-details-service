@@ -10,5 +10,3 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.listen(3002, () => {
   console.log(`listening on port 3002`);
 })
-
-// Routes and API's will go here:
