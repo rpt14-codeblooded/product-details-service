@@ -1,8 +1,12 @@
 import React from 'react';
 
-const ItemRemainingComponent = () => {
+const ItemRemainingComponent = (props) => {
   return (
-    <div>ItemRemainingComponent</div>
+    <div>
+      {props.item.map((limit) =>
+        <p key={limit._id} limit={limit}>{limit.limitRemaining}</p>
+        )}
+    </div>
   )
 };
 
