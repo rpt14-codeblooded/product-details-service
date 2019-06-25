@@ -3,7 +3,7 @@ import React from 'react';
 const PriceComponent = (props) => {
   return (
     <div>
-    {props.price.map((cost) =>
+    {props.prodDeets.map((cost) =>
       <p key={cost._id} cost={cost}>{cost.price}</p>
       // create a Buy It component so you can have buttons in it
     )}
