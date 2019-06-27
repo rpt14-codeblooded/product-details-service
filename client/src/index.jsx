@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 import TitleComponent from './components/TitleComponent.jsx';
-import QuantityComponent from './components/QuantityComponent.jsx';
-import ProductNumberComponent from './components/TitleComponent.jsx';
+import StarsComponent from './components/StarsComponent.jsx';
+import ProductNumberComponent from './components/ProductNumberComponent.jsx';
 import PriceComponent from './components/PriceComponent.jsx';
 import ItemRemainingComponent from './components/ItemRemainingComponent.jsx';
 import ConditionComponent from './components/ConditionComponent.jsx';
@@ -20,8 +20,9 @@ class App extends React.Component {
   }
   componentDidMount() {
     axios.get('/product-details')
-      .then((results) => {
-        this.setState({products: results.data})
+    .then((results) => {
+      this.setState({products: results.data}, () => {
+      })
     })
   }
 
@@ -29,12 +30,12 @@ class App extends React.Component {
     return (
       <div>
         <h1>Service Oriented Application SOA - Front-End Capstone</h1>
-        <TitleComponent pass={this.state}/>
-        <QuantityComponent />
-        <ProductNumberComponent />
-        <PriceComponent />
-        <ItemRemainingComponent />
-        <ConditionComponent />
+        <TitleComponent title={this.state.products}/>
+        <StarsComponent quantity={this.state.products}/>
+        <ProductNumberComponent productNum={this.state.products}/>
+        <PriceComponent price={this.state.products}/>
+        <ItemRemainingComponent item={this.state.products}/>
+        <ConditionComponent condition={this.state.products}/>
       </div>
     )
   }

@@ -1,8 +1,13 @@
 import React from 'react';
 
-const ProductNumberComponent = () => {
+const ProductNumberComponent = (props) => {
   return (
-    <div>ProductNumberComponent</div>
+    <div>
+    productNum
+    {props.productNum.map((prodnum) =>
+      <p key={prodnum._id} prodnum={prodnum}>{prodnum.productNumber}</p>
+    )}
+    </div>
   )
 };
 export default ProductNumberComponent;

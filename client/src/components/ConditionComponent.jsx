@@ -1,8 +1,12 @@
 import React from 'react';
 
-const ConditionComponent = () => {
+const ConditionComponent = (props) => {
   return (
-    <div>ConditionComponent</div>
+    <div>
+    {props.condition.map((status) =>
+      <p key={status._id} status={status}>{status.condition}</p>
+      )}
+    </div>
   )
 };
 
