@@ -10,6 +10,7 @@ import ItemRemainingComponent from './components/ItemRemainingComponent.jsx';
 import ConditionComponent from './components/ConditionComponent.jsx';
 import ProductDetailsComponent from './components/ProductDetailsComponent.jsx'
 
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -19,7 +20,7 @@ class App extends React.Component {
     // here is where I would bind my methods using 'this'
   }
   componentDidMount() {
-    axios.get('/product-details')
+    axios.get(`/product-details`)
     .then((results) => {
       this.setState({products: results.data}, () => {
       })

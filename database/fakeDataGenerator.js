@@ -1,6 +1,6 @@
 const faker = require('faker');
 
-module.exports = function() {
+var dataGenerator = function() {
   var productDetails = [];
 
   for (var i = 1; i <= 100; i++) {
@@ -17,7 +17,7 @@ module.exports = function() {
 
     });
   }
-  return {
-    productDetails: productDetails
-  };
+  return productDetails;
 }
+const data = dataGenerator();
+module.exports.data = data;
