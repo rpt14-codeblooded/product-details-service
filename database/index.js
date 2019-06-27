@@ -37,14 +37,17 @@ let deleteDB = () => {
 }
 
 // This function is just to return all data from DB to display on UI. Future refactor for getting only items with specific ID
-let getAllProductDetails = (cb) => {
-  ProductDeets.find({}).exec()
+let getProductDetails = (id, cb) => {
+  ProductDeets.findOne({id: id}).exec()
   .then((results) => {
     cb(results);
   })
+  .catch((err) => {
+    console.log('There was an error getting the product by its ID', err)
+  })
 }
 
-module.exports.getAllProductDetails = getAllProductDetails;
+module.exports.getProductDetails = getProductDetails;
 module.exports.ProductDeets = ProductDeets;
 module.exports.saveProductDetails = saveProductDetails;
 module.exports.deleteDB = deleteDB;

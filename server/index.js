@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const morgan = require('morgan');
-const getAllProductDetails = require('../database/index').getAllProductDetails;
+const getProductDetails = require('../database/index').getProductDetails;
 
 
 app.use(morgan('dev'));
@@ -13,8 +13,10 @@ app.listen(3002, () => {
   console.log(`listening on port 3002`);
 })
 
-app.get('/product-details', (req, res) => {
-  getAllProductDetails((results) => {
+app.get(`/product-details/id`, (req, res) => {
+  console.log(req.params)
+  let id = req.params.id;
+  getProductDetails(id,  (results) => {
     res.send(results);
   })
 })

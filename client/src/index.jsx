@@ -20,7 +20,11 @@ class App extends React.Component {
     // here is where I would bind my methods using 'this'
   }
   componentDidMount() {
-    axios.get(`/product-details`)
+    const homePath = window.location.pathname;
+    const currentPath = homePath.match(/[0-9]/g);
+    const id = Number(currentPath.join(''));
+    console.log('window', homePath, id)
+    axios.get(`/${id}`)
     .then((results) => {
       this.setState({products: results.data}, () => {
       })
