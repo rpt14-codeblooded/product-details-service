@@ -9,14 +9,14 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
+app.use('/:id',express.static(__dirname + '/../client/dist'));
 app.listen(3002, () => {
   console.log(`listening on port 3002`);
 })
 
-app.get(`/product-details/id`, (req, res) => {
-  console.log(req.params)
+app.get('/api/productdetails/:id', (req, res) => {
   let id = req.params.id;
-  getProductDetails(id,  (results) => {
+  getProductDetails(id, (results) => {
     res.send(results);
   })
 })
