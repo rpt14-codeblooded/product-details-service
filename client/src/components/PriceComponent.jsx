@@ -3,7 +3,7 @@ import React from 'react';
 const PriceComponent = (props) => {
   return (
     <div>
-      <p>{props.prodDeets.price}</p>
+      <p>Price: <span>US ${props.prodDeets.price}</span></p>
       <div>
         <button>Buy It Now</button>
         <button>Add to cart</button>
