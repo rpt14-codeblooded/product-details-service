@@ -3,7 +3,7 @@ import React from 'react';
 const ItemRemainingComponent = (props) => {
   return (
     <div>
-      {props.item.map((limit) =>
+      {props.prodDeets.map((limit) =>
         <p key={limit._id} limit={limit}>{limit.limitRemaining}</p>
         )}
     </div>

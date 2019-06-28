@@ -4,7 +4,7 @@ const ProductNumberComponent = (props) => {
   return (
     <div>
     productNum
-    {props.productNum.map((prodnum) =>
+    {props.prodDeets.map((prodnum) =>
       <p key={prodnum._id} prodnum={prodnum}>{prodnum.productNumber}</p>
     )}
     </div>

@@ -7,6 +7,8 @@ mongoose.connect('mongodb://localhost/productDetails', { useNewUrlParser: true }
   console.log('Connected to DB')
 });
 
+const dbConnect = mongoose.connection;
+
 let productDetailsSchema = mongoose.Schema({
   id: Number,
   productTitle: String,
@@ -21,6 +23,19 @@ let productDetailsSchema = mongoose.Schema({
 
 let ProductDeets = mongoose.model('productdetails', productDetailsSchema);
 
+
+let saveProductDetails = (productDetailsArray) => {
+  ProductDeets.create(productDetailsArray, (err, details) => {
+    if (err) {
+      console.error(err)
+    }
+    console.log('Details saved to Database');
+  })
+}
+let deleteDB = () => {
+  dbConnect.dropDatabase();
+}
+
 // This function is just to return all data from DB to display on UI. Future refactor for getting only items with specific ID
 let getAllProductDetails = (cb) => {
   ProductDeets.find({}).exec()
@@ -30,3 +45,6 @@ let getAllProductDetails = (cb) => {
 }
 
 module.exports.getAllProductDetails = getAllProductDetails;
+module.exports.ProductDeets = ProductDeets;
+module.exports.saveProductDetails = saveProductDetails;
+module.exports.deleteDB = deleteDB;

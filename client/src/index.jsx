@@ -8,6 +8,7 @@ import ProductNumberComponent from './components/ProductNumberComponent.jsx';
 import PriceComponent from './components/PriceComponent.jsx';
 import ItemRemainingComponent from './components/ItemRemainingComponent.jsx';
 import ConditionComponent from './components/ConditionComponent.jsx';
+import ProductDetailsComponent from './components/ProductDetailsComponent.jsx'
 
 
 class App extends React.Component {
@@ -19,23 +20,19 @@ class App extends React.Component {
     // here is where I would bind my methods using 'this'
   }
   componentDidMount() {
-    axios.get('/product-details')
+    axios.get(`/product-details`)
     .then((results) => {
       this.setState({products: results.data}, () => {
       })
     })
+    .catch(err => console.log(err))
   }
 
   render () {
     return (
       <div>
         <h1>Service Oriented Application SOA - Front-End Capstone</h1>
-        <TitleComponent title={this.state.products}/>
-        <StarsComponent quantity={this.state.products}/>
-        <ProductNumberComponent productNum={this.state.products}/>
-        <PriceComponent price={this.state.products}/>
-        <ItemRemainingComponent item={this.state.products}/>
-        <ConditionComponent condition={this.state.products}/>
+        <ProductDetailsComponent prodDeets={this.state.products}/>
       </div>
     )
   }

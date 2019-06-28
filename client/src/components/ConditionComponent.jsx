@@ -3,7 +3,7 @@ import React from 'react';
 const ConditionComponent = (props) => {
   return (
     <div>
-    {props.condition.map((status) =>
+    {props.prodDeets.map((status) =>
       <p key={status._id} status={status}>{status.condition}</p>
       )}
     </div>

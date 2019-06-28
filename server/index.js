@@ -15,7 +15,6 @@ app.listen(3002, () => {
 
 app.get('/product-details', (req, res) => {
   getAllProductDetails((results) => {
-    console.log('!!!!!', results)
     res.send(results);
   })
 })
