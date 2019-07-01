@@ -3,7 +3,7 @@ import React from 'react';
 const ConditionComponent = (props) => {
   return (
     <div>
-      <p>{props.prodDeets.condition}</p>
+      <p>Condition: {props.prodDeets.condition}</p>
     </div>
   )
 };
