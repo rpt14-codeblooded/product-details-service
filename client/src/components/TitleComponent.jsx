@@ -3,9 +3,7 @@ import React from 'react';
 const TitleComponent = (props) => {
   return (
     <div>
-    {props.prodDeets.map((header) =>
-      <h1 key={header._id} header={header}>{header.productTitle}</h1>
-    )}
+      <h1>{props.prodDeets.productTitle}</h1>
     </div>
   )
 };

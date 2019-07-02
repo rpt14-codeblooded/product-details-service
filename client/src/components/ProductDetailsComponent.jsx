@@ -1,20 +1,42 @@
 import React from 'react';
 import TitleComponent from './TitleComponent.jsx';
 import StarsComponent from './StarsComponent.jsx';
-import ProductNumberComponent from './ProductNumberComponent.jsx';
 import PriceComponent from './PriceComponent.jsx';
 import ItemRemainingComponent from './ItemRemainingComponent.jsx';
 import ConditionComponent from './ConditionComponent.jsx';
+import styled from 'styled-components'
+
+
+
+const ProdContainer = styled.div`
+  background: #F8F8F8;
+  width: 435px;
+  margin: 0 auto;
+  padding: 0 20px 15px;
+`;
+const ButtonContainer = styled.div`
+  background: #E2E2E2;
+  margin: 0 auto;
+  padding: 20px 15px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1), 0 0px 0px #aaaaaa;
+  height: 120px;
+`;
+
 
 const ProductDetailsComponent = (props) => {
     return (
       <div>
-        <TitleComponent {...props} />
-        <StarsComponent {...props}/>
-        <ProductNumberComponent {...props}/>
-        <PriceComponent {...props}/>
-        <ItemRemainingComponent {...props}/>
-        <ConditionComponent {...props}/>
+        <ProdContainer>
+          <TitleComponent {...props} />
+          <ConditionComponent {...props}/>
+          <ItemRemainingComponent {...props}/>
+          <StarsComponent {...props}/>
+
+          <ButtonContainer>
+            <PriceComponent {...props}/>
+          </ButtonContainer>
+      </ProdContainer>
       </div>
     )
   }
