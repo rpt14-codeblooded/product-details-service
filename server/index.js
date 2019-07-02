@@ -10,9 +10,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 app.use('/:id',express.static(__dirname + '/../client/dist'));
-app.listen(3002, () => {
-  console.log(`listening on port 3002`);
-})
 
 app.get('/api/productdetails/:id', (req, res) => {
   let id = req.params.id;
@@ -20,3 +17,5 @@ app.get('/api/productdetails/:id', (req, res) => {
     res.send(results);
   })
 })
+
+module.exports.app = app;

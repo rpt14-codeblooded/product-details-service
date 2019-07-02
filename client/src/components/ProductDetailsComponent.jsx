@@ -1,7 +1,6 @@
 import React from 'react';
 import TitleComponent from './TitleComponent.jsx';
 import StarsComponent from './StarsComponent.jsx';
-import ProductNumberComponent from './ProductNumberComponent.jsx';
 import PriceComponent from './PriceComponent.jsx';
 import ItemRemainingComponent from './ItemRemainingComponent.jsx';
 import ConditionComponent from './ConditionComponent.jsx';
@@ -33,7 +32,7 @@ const ProductDetailsComponent = (props) => {
           <ConditionComponent {...props}/>
           <ItemRemainingComponent {...props}/>
           <StarsComponent {...props}/>
-          <ProductNumberComponent {...props}/>
+
           <ButtonContainer>
             <PriceComponent {...props}/>
           </ButtonContainer>
