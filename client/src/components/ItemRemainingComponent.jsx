@@ -1,14 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaFire } from 'react-icons/fa';
 
-const ItemRemaining = styled.p`
+const FireIconContainer = styled.div`
+  color: firebrick;
+`
+
+const ItemRemaining = styled.div`
   padding: 0;
   margin: 0;
 `
 const ItemRemainingComponent = (props) => {
   return (
     <div>
-        <ItemRemaining>{props.prodDeets.limitRemaining}</ItemRemaining>
+      {
+        props.prodDeets.limitRemaining < 10 ? <ItemRemaining><FireIconContainer><FaFire /><FaFire /></FireIconContainer>{props.prodDeets.limitRemaining}</ItemRemaining> : <ItemRemaining>{props.prodDeets.limitRemaining}</ItemRemaining>
+      }
     </div>
   )
 };

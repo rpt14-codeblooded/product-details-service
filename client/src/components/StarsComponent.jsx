@@ -1,8 +1,6 @@
 import ReactStars from 'react-stars'
 import React from 'react';
-import { render } from 'react-dom'
 import styled from 'styled-components';
-import { FaStar } from 'react-icons/fa';
 
 
 const StarNumberContainer = styled.div`
