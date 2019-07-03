@@ -1,13 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-
-import TitleComponent from './components/TitleComponent.jsx';
-import StarsComponent from './components/StarsComponent.jsx';
-import ProductNumberComponent from './components/ProductNumberComponent.jsx';
-import PriceComponent from './components/PriceComponent.jsx';
-import ItemRemainingComponent from './components/ItemRemainingComponent.jsx';
-import ConditionComponent from './components/ConditionComponent.jsx';
 import ProductDetailsComponent from './components/ProductDetailsComponent.jsx'
 
 

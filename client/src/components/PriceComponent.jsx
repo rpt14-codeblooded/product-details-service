@@ -51,28 +51,29 @@ const WishListButton = styled.button`
   font-size: 0.7em;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 3px #aaaaaa;
   text-align: center;
-
 `;
 
 const PriceTag = styled.p`
-  margin: 0 auto 0px 10px;
-  float: left;
+margin: 0 auto;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,400i,500i,600,700,800,900&display=swap');
+font-family: 'Montserrat', sans-serif;
+float: left;
 `;
 
 const DollarTag = styled.span`
-  margin-left: 20px;
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: bold;
+margin-left: 20px;
+font-size: 1em;
+text-transform: uppercase;
+font-weight: bold;
 `;
 
 const InnerButtonContainer = styled.span`
-  float: right;
+float: right;
 `;
 
 const ProdNumber = styled.div`
-  margin: auto;
-  float: left;
+margin: auto;
+float: left;
 `;
 
 
