@@ -35,7 +35,7 @@ const ConditionContainer = styled.div`
   `;
   const ItemsRemainingContainer = styled.div`
     order: 2;
-    flex-grow: 1;
+    flex-grow: 2;
   `;
   const StarsContainer = styled.div`
     order: 3;
