@@ -31,7 +31,6 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <h1>Service Oriented Application SOA - Front-End Capstone</h1>
         <ProductDetailsComponent prodDeets={this.state}/>
       </div>
     )
