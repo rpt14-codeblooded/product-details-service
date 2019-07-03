@@ -18,6 +18,16 @@ const BuyButton = styled.button`
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 3px #aaaaaa;
   text-align: center;
   font-weight: bold;
+
+  &:hover ${BuyButton} {
+    background-image: linear-gradient(#0079bc 0%, #0079bc 75%);
+  }
+  &:active ${BuyButton} {
+    background-image: linear-gradient(#00509d 0%, #00509d 75%);
+    transform: translateY(1px);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1px #666;
+  }
 `;
 
 const AddButton = styled.button`
@@ -35,6 +45,16 @@ const AddButton = styled.button`
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 3px #aaaaaa;
   text-align: center;
   font-weight: bold;
+
+  &:hover ${AddButton} {
+    background-image: linear-gradient(#45aad6 0%, #45aad6 75%);
+  }
+  &:active ${AddButton} {
+    background-image: linear-gradient(#2386c0 0%, #2386c0 75%);
+    transform: translateY(1px);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1px #666;
+  }
 `;
 
 const WishListButton = styled.button`
@@ -51,6 +71,15 @@ const WishListButton = styled.button`
   font-size: 0.7em;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 3px #aaaaaa;
   text-align: center;
+
+  &:hover ${WishListButton} {
+    background-image: linear-gradient(#f9f9f9 0%, #f9f9f9 75%);
+    color: rgba(0, 0, 190, 0.7);
+  }
+  &:active ${WishListButton} {
+    background-image: linear-gradient(#fcfcfc 0%, #fcfcfc 75%);
+    transform: translateY(1px);
+  }
 `;
 
 const PriceTag = styled.p`
