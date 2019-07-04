@@ -23,15 +23,44 @@ const ButtonContainer = styled.div`
   height: 120px;
 `;
 
+const DetailsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+`;
+const ConditionContainer = styled.div`
+    order: 1;
+    flex-grow: 1;
+  `;
+  const ItemsRemainingContainer = styled.div`
+    order: 2;
+    flex-grow: 2;
+  `;
+  const StarsContainer = styled.div`
+    order: 3;
+    flex-grow: 1;
+`;
+
+
+
 
 const ProductDetailsComponent = (props) => {
     return (
       <div>
         <ProdContainer>
           <TitleComponent {...props} />
-          <ConditionComponent {...props}/>
-          <ItemRemainingComponent {...props}/>
-          <StarsComponent {...props}/>
+          <DetailsContainer>
+            <ConditionContainer>
+              <ConditionComponent {...props}/>
+            </ConditionContainer>
+            <ItemsRemainingContainer>
+              <ItemRemainingComponent {...props}/>
+            </ItemsRemainingContainer>
+            <StarsContainer>
+              <StarsComponent {...props}/>
+            </StarsContainer>
+          </DetailsContainer>
 
           <ButtonContainer>
             <PriceComponent {...props}/>
