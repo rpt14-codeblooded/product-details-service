@@ -15,6 +15,7 @@
     "test": "jest --env=jsdom",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/server.js",
+    "start": "webpack && node server/server.js",
     "json-server": "json-server --watch database/fakeDataGenerator.js"
   },
   "dependencies": {
@@ -33,7 +34,7 @@
     "react-router-dom": "^5.0.1",
     "react-stars": "^2.2.5",
     "require": "^2.4.20",
-    "styled-components": "^4.3.2"
+    "styled-components": "^2.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
