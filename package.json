@@ -34,7 +34,7 @@
     "react-router-dom": "^5.0.1",
     "react-stars": "^2.2.5",
     "require": "^2.4.20",
-    "styled-components": "^2.1.2"
+    "styled-components": "4.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
