@@ -23,12 +23,17 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader" }
         ]
       }
     ]
-  }
+  },
+  resolve: {
+    alias: {
+     "styled-components": path.resolve("./node_modules", "styled-components"),
+    }
+   }
 }

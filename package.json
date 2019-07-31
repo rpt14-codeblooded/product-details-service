@@ -1,5 +1,5 @@
 {
-  "name": "front-end-capstone-server",
+  "name": "front-end-capstone-product-details-service",
   "jest": {
     "verbose": true
   },
