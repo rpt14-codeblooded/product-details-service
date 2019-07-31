@@ -1,6 +1,7 @@
 const app = require('./index').app;
 
-app.listen(3002, () => {
-  console.log(`listening on port 3002`);
+var port = process.env.PORT || 3002;
+app.listen(port, () => {
+  console.log(`listening on port ${port}`);
 })
 

@@ -18,7 +18,7 @@ class App extends React.Component {
     if (currentPath) {
       const id = Number(currentPath.join(''));
       if (id >= 0 && id <= 100) {
-      axios.get(`/api/productdetails/${id}`)
+      axios.get(`http://localhost:3002/api/productdetails/${id}`)
       .then((results) => {
         this.setState(results.data, () => {
         })
@@ -37,4 +37,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('productService'));

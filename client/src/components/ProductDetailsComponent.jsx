@@ -33,7 +33,7 @@ const ConditionContainer = styled.div`
     order: 1;
     flex-grow: 1;
   `;
-  const ItemsRemainingContainer = styled.div`
+  const ItemRemainingContainer = styled.div`
     order: 2;
     flex-grow: 2;
   `;
@@ -54,9 +54,9 @@ const ProductDetailsComponent = (props) => {
             <ConditionContainer>
               <ConditionComponent {...props}/>
             </ConditionContainer>
-            <ItemsRemainingContainer>
+            <ItemRemainingContainer>
               <ItemRemainingComponent {...props}/>
-            </ItemsRemainingContainer>
+            </ItemRemainingContainer>
             <StarsContainer>
               <StarsComponent {...props}/>
             </StarsContainer>

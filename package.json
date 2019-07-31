@@ -1,5 +1,5 @@
 {
-  "name": "front-end-capstone-server",
+  "name": "front-end-capstone-product-details-service",
   "jest": {
     "verbose": true
   },
@@ -15,11 +15,13 @@
     "test": "jest --env=jsdom",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/server.js",
+    "start": "webpack && node server/server.js",
     "json-server": "json-server --watch database/fakeDataGenerator.js"
   },
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "json-server": "^0.15.0",
@@ -32,7 +34,7 @@
     "react-router-dom": "^5.0.1",
     "react-stars": "^2.2.5",
     "require": "^2.4.20",
-    "styled-components": "^4.3.2"
+    "styled-components": "4.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

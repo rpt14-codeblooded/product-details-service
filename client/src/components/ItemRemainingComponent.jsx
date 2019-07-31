@@ -20,7 +20,9 @@ const ItemRemainingComponent = (props) => {
   return (
     <div>
       {
-        props.prodDeets.limitRemaining < 10 ? <ItemRemaining>Items Remaining : <RemainingnNumber>{props.prodDeets.limitRemaining}</RemainingnNumber> <FireIconContainer><FaFire /><FaFire /></FireIconContainer></ItemRemaining> : <ItemRemaining>Items Remaining : <RemainingnNumber>{props.prodDeets.limitRemaining}</RemainingnNumber></ItemRemaining>
+        props.prodDeets.limitRemaining < 10 ?
+        <ItemRemaining>Items Remaining
+        : <RemainingnNumber>{props.prodDeets.limitRemaining}</RemainingnNumber> <FireIconContainer><FaFire /><FaFire /></FireIconContainer></ItemRemaining> : <ItemRemaining>Items Remaining : <RemainingnNumber>{props.prodDeets.limitRemaining}</RemainingnNumber></ItemRemaining>
       }
     </div>
   )
