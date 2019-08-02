@@ -4,7 +4,7 @@ mongoose.connect('mongodb://localhost/productDetails', { useNewUrlParser: true }
   if (err) {
     console.err(err);
   }
-  console.log('Connected to DB')
+  // console.log('Connected to DB');
 });
 
 const dbConnect = mongoose.connection;
