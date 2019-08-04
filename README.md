@@ -1,6 +1,6 @@
 # Product Details Service
 
-> Project description
+> Ebay Product Details Service created for Front-end Capstone at Hack Reactor.
 
 ## Related Projects
 
