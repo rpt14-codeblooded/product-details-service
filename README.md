@@ -1,4 +1,4 @@
-# Project Name
+# Product Details Service
 
 > Project description
 
