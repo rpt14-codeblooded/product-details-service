@@ -2,18 +2,13 @@
 
 > Ebay Product Details Service created for Front-end Capstone at Hack Reactor.
 
-## Related Projects
+## Instructions
 
+  - Clone this repo
+  - Once cloned to your local machine run `npm install` - this will install all the necessary packages needed for this project.
+  - Navigate to this project within your terminal window and run `node database/seeder.js` - this will create and seed your mongo database with 100 records.
+  -- Each record will have 
   - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
 
 ## Usage
 
